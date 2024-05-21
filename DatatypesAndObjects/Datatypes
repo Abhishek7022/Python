@@ -1,0 +1,63 @@
+********** Datatypes in Python **********
+
+
+Some of the most commonly used datatypes in python are:
+
+1. Integer:
+      Integer type is always a whole number.
+      Example: 9, 108, -7 and so on.
+
+2. Float:
+      Floating point number has decimal point and is used for precision calculations.
+      Example: 3.145, 108.1008 and -0.001364
+
+3. String:
+      String can be a single character or a sentence.
+      Example: 'A', 'Hello!', "My favorite language, Python!"
+
+4. List:
+      List is a collection of mutable objects.
+      Example: [12, 'Satomi', 5.7] or ['apple', 'banana', 'carrot']
+
+5. Dictionary:
+      Dictionary is a collection of objects stored in a key:value pair.
+      Example: {"Name":"Vedavid", "Age":25, "Place":"Mithila"}
+
+6. Tuple:
+      Tuples are a collection of ordered or unordered objects. Unlike lists, Tuples are immutable.
+      Example: (1, 2, 3, 'Monday')
+
+7. Boolean:
+      Boolean datatype store two values True or False.
+      Example: Alive = True
+
+8. None:
+      Special type with a single value None. Mostly used as a place-holder
+
+---------------------------------------------------------------------------------------------
+
+***** Example of all datatypes:
+
+      num = 108
+      fl  = 108.1008
+      my_str = 'This is a string'
+      my_list = ['Satomi', 29, 'Actor', 5.7,]
+      my_dict = {"Status":"Married", "Nationality":"Japanese", "Pincode":"870056"}
+      my_tuple = ('Yang-nbi', 251, 'Alpha')
+      Alive = True
+      None
+
+---------------------------------------------------------------------------------------------
+
+a = 'Welcome to this amazing python course'
+b = "Let's learn python"
+c = 'Hoohray!!'
+print(a + ' Vedavid. ' + b)
+print(a.split())
+print(f'{c} This is an awesome feeling!!')
+
+print(my_dict)
+print(my_list[2])
+print(my_tuple)
+print(my_tuple)
+print(my_str)
