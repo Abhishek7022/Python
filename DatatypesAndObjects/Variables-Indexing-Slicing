@@ -1,1 +1,58 @@
 **************** Variable assignment || Indexing || Slicing || steps ****************
+
+---------------------------------------------------------------------------------------------
+
+Indexing:
+
+      Indexing is used to access individual elements of a string, list or tuple using their index positions.
+
+Example:
+    my_string = 'Hello Satomi'
+                [0123456789]   ------This is how indexing works
+        To print individual elements:
+                print(my_string[0])               --output: H
+                print(my_string[6])               --output: S
+
+    my_list = [1, 9, 'Fubuki', 'V']
+        To print individual elements:
+                print(my_list[1])                 --output: 9
+                print(my_list[3])                 --output: V
+
+---------------------------------------------------------------------------------------------
+
+Slicing:
+
+      Slicing allows you to access a subset of elements. The syntax for slicing is [start:stop],
+       where start is the index to begin the slice (inclusive), and stop is the index to end the slice (exclusive).
+
+Example:
+    my_string = 'Hello Satomi'
+                [0123456789]   ------This is how indexing works
+    my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+        To slice a section of elements:
+                print(my_string[1:4])             --output: ell
+                print(my_string[6:10])            --output: Sato
+                print(my_list[2:9])               --output: 3 4 5 6 7 8
+                
+
+---------------------------------------------------------------------------------------------
+
+Steps:
+
+      Steps allow you to access elements at specific intervals within a sequence.
+       Syntax for slicing with steps is [start:stop:step], where 'step' is interval between elements.
+
+Example:
+    my_string = 'Hello Satomi'
+    my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+        To slice a sequence with steps:
+                print(my_string[0:11:2])             --output: HloStm
+                print(my_string[1::3])          --output: eoai
+                print(my_list[::2])               --output: 1 3 5 7 9
+
+---------------------------------------------------------------------------------------------
+
+*****To reverse a given string using oneliner:
+                print(my_string[::-1])
+
+---------------------------------------------------------------------------------------------

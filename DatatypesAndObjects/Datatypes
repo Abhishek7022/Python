@@ -16,7 +16,7 @@ Some of the most commonly used datatypes in python are:
       Example: 'A', 'Hello!', "My favorite language, Python!"
 
 4. List:
-      List is a collection of mutable objects.
+      List is an ordered collection of mutable objects.
       Example: [12, 'Satomi', 5.7] or ['apple', 'banana', 'carrot']
 
 5. Dictionary:
@@ -24,7 +24,7 @@ Some of the most commonly used datatypes in python are:
       Example: {"Name":"Vedavid", "Age":25, "Place":"Mithila"}
 
 6. Tuple:
-      Tuples are a collection of ordered or unordered objects. Unlike lists, Tuples are immutable.
+      Tuples are an collection of ordered objects. Unlike lists, Tuples are immutable.
       Example: (1, 2, 3, 'Monday')
 
 7. Boolean:
@@ -45,19 +45,17 @@ Some of the most commonly used datatypes in python are:
       my_dict = {"Status":"Married", "Nationality":"Japanese", "Pincode":"870056"}
       my_tuple = ('Yang-nbi', 251, 'Alpha')
       Alive = True
-      None
+      Soul = None
 
 ---------------------------------------------------------------------------------------------
 
-a = 'Welcome to this amazing python course'
-b = "Let's learn python"
-c = 'Hoohray!!'
-print(a + ' Vedavid. ' + b)
-print(a.split())
-print(f'{c} This is an awesome feeling!!')
+      age    = 25
+      height = 5.10
+      look   = 'An average looking person'
+      detail = ['Student', 'Physics', 4, 9.7]
+      kword  = {'cosmic':'slaughter', 'length': 41, 'galaxy': 9.37}
+      tupp   = (108, 10.5, 'Dashavatar')
+      hollow = True
+      p_holder = None
 
-print(my_dict)
-print(my_list[2])
-print(my_tuple)
-print(my_tuple)
-print(my_str)
+---------------------------------------------------------------------------------------------
