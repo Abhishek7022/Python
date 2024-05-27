@@ -1,0 +1,45 @@
+******************** Methods And Functions ********************
+
+Both Methods and Functions are blocks of reusable code that can be used to perform various tasks.
+This makes the code more organized and readable.
+
+
+1. Functions:
+
+A function is a block of reusable code that is used to perform a specific task.
+
+Syntax:
+def function_name():
+   rest_of_the_code
+
+Example:
+def hello(name):
+   print(f"Hello! {name}")
+
+hello('Satomi')
+
+---------------------------------------------------------------------------------------------
+
+2. Methods:
+
+A Method is similar to a function, but it is associated with objects. Methods are functions that
+belong to a class and typically operate on the data contained within the class.
+
+Methods are defined inside a class and called upon instances of that class.
+
+Example:
+
+class Greeter:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        return f"Hello, {self.name}!"
+
+# Creating an instance of the class
+greeter = Greeter("Bob")
+
+# Calling the method
+print(greeter.greet())  # Output: Hello, Bob!
+
+

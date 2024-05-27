@@ -16,7 +16,7 @@ Some of the most commonly used datatypes in python are:
       Example: 'A', 'Hello!', "My favorite language, Python!"
 
 4. List:
-      List is an ordered collection of mutable objects.
+      List is an ordered collection of immutable objects.
       Example: [12, 'Satomi', 5.7] or ['apple', 'banana', 'carrot']
 
 5. Dictionary:

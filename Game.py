@@ -57,3 +57,15 @@ print(m)
 
 t7 = [x[0] for x in t6.split()]
 print(t7, 'List comprehension method')
+
+t8 = 'Print all the prime numbers for a given range'
+mynum = range(1, 70)
+
+def prime(num):
+    for x in range(2, num):
+        if num % x == 0:
+            return False
+    return True
+
+primes = list(filter(prime, mynum))
+print(primes)
