@@ -261,5 +261,3 @@ neww = range(1, 100)
 
 print(len(list(filter(count_primes, neww))))
 
-
-
