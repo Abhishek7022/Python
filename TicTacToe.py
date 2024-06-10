@@ -36,7 +36,6 @@ def game_markers():
 p1m, p2m = game_markers()
 
 
-
 def game_dashboard(l):
 
 
@@ -47,7 +46,6 @@ def game_dashboard(l):
     print('|_______|_______|_______|')
     print(f"|   {l[6]}   |   {l[7]}   |   {l[8]}   |")
     print('|_______|_______|_______|')
-
 
 
 def game_begins(l):
@@ -77,7 +75,6 @@ def game_begins(l):
         winner()
 
 
-
 def winner():
 
     print()
@@ -102,7 +99,6 @@ def winner():
             play_again()
 
 
-
 def play_again():
 
     print()
@@ -119,7 +115,6 @@ def play_again():
         exit()
 
 
-
 def pos_vals():
 
     return [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -128,6 +123,4 @@ def pos_vals():
 indx = list(range(1, 10))
 l = pos_vals()
 game_begins(l)
-
-
 

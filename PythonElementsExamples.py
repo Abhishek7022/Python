@@ -128,12 +128,10 @@ def cap_name(namaya):
 
    return ''.join(new)
 
-
 print(cap_name('Matthew'))
 
 
 # Write a function to reverse the given words in a string:
-
 def rev_words(stg):
    lol = stg.split()
    lol.reverse()
@@ -143,7 +141,6 @@ print(rev_words('Hello how are you'))
 
 
 # Write a function to return true if a given integer is within 10 of either
-
 def almost_there(at):
    if at >= 90 and at < 190:
       for x in range(90, 111):
@@ -166,7 +163,6 @@ print(almost_there(209))
 
 
 # Write a function that returns true if two consecutive numbers are equal.
-
 list1 = [1, 2, 3, 4]
 list2 = [3, 3, 2, 1]
 list3 = [5, 6, 3, 3]
@@ -182,7 +178,6 @@ print(has_33(list3))
 
 
 # Given a string, return 3 times the same characters in the string.
-
 def estr(wods):
    w = []
    for x in wods:
@@ -193,7 +188,6 @@ print(estr('Hello'))
 
 
 # Write a function about blackjack game:
-
 def blackjack(b, l, j):
    if b+l+j <= 21:
       return b+l+j
@@ -208,7 +202,6 @@ print(blackjack(9, 9, 9))
 
 
 # Write a function about an array of numbers:
-
 def summer(arr):
    ig = []
    if len(arr) == 0:
@@ -230,7 +223,6 @@ print(summer(le))
 
 
 # Write a function to print true if a given list has 0, 0, 7 in order.
-
 def bond(nolist):
    nl = [0, 0, 7, 'x']
    for x in nolist:
@@ -248,7 +240,6 @@ print(bond(yra))
 
 
 # Write a function to count prime:
-
 def count_primes(num):
    if num == 1:
       return False
@@ -261,3 +252,52 @@ neww = range(1, 100)
 
 print(len(list(filter(count_primes, neww))))
 
+
+#Print all the upper and lower case characters in a given string:
+def checkns(mys):
+    u, l, i = 0, 0, 0
+    while i < len(mys):
+        if mys[i].isupper():
+            u += 1
+        elif mys[i].islower():
+            l += 1
+        else:
+            pass
+        i += 1
+    print('No. of uppercase characters: {}'.format(u))
+    print('No. of lowercase characters: {}'.format(l))
+
+checkns('Hello Mr. Rogers, how are you this fine Tuesday?')
+
+
+#Print all the unique elements in a given list:
+def nlist(mylist):
+    return list(set(mylist))
+
+mlist = [1,1,1,1,1,2,2,2,4,4,6,7,6,7,8,6,9,6,9,0,6,12,11,11,2,12]
+print(nlist(mlist))
+
+
+#Multiply all the elements in a given list:
+def muln(lst):
+    i, u = 0, 1
+    while i < len(lst):
+        u = lst[i]*u
+        i += 1
+    return u
+
+nlist = [1,2,3,-4]
+print(muln(nlist))
+
+
+#Check if a given string has all the letters of english alphabet:
+def panda(sstr):
+    i = 0
+    while i < len(sstr):
+        if sstr[i] in 'abcdefghijklmnopqrstuvwxyz':
+            return True
+        i += 1
+    return False
+
+neww = 'The quick brown fox jumps over the lazy dog'
+print(list(set(filter(panda, neww))))
