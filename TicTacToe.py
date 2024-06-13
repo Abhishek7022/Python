@@ -8,6 +8,9 @@
 #6. Ask players if they wish to restart the game or exit.
 
 def game_markers():
+    '''
+    This function prints the welcome text and asks the player to choose a marker.
+    '''
 
     welcome_txt = (
         "Welcome to the Tic Tac Toe Game!\n"
@@ -26,20 +29,18 @@ def game_markers():
 
     player2_marker = 'X' if player1_marker == 'O' else 'O'
     print()
-    print(f'Player 1 has chosen {player1_marker}  ||  Player 2 has been assigned {player2_marker}')
-    print()
+    print(f'Player 1 has chosen {player1_marker}  ||  Player 2 has been assigned {player2_marker}\n')
     print('Welcome to tic tac toe game dashboard')
 
     return player1_marker, player2_marker
 
 
-p1m, p2m = game_markers()
-
-
 def game_dashboard(l):
+    '''
+    This functions print the game dashboard information
+    '''
 
-
-    print('.________________________.')
+    print('._______________________.')
     print(f"|   {l[0]}   |   {l[1]}   |   {l[2]}   |")
     print('|_______|_______|_______|')
     print(f"|   {l[3]}   |   {l[4]}   |   {l[5]}   |")
@@ -48,38 +49,60 @@ def game_dashboard(l):
     print('|_______|_______|_______|')
 
 
-def game_begins(l):
+def game_begins(p1m, p2m):
+    '''
+    Function contains game logic and game structure
+    '''
 
-    p = 1
+    indx = list(range(1, 10))
+    l = pos_vals()
+    player = 1
+    game_dashboard(l)
 
     while True:
 
 
-        game_dashboard(l)
         print()
-        mv = int(input(f'*Player{p} please enter your index position from 1 to 9: '))
+
+        mv = ask_mv(player)
+
         while mv not in indx:
             game_dashboard(l)
-            mv = int(input(f'*Player{p} please enter a valid index position from 1 to 9: '))
+            mv = ask_mv(player)
 
         indx.remove(mv)
 
-        if p%2 != 0:
+        if player%2 != 0:
             l[mv-1] = p1m
-            p += 1
+            player += 1
         else:
             l[mv-1] = p2m
-            p -= 1
+            player -= 1
         game_dashboard(l)
 
-        winner()
+        if winner(l, indx, p1m, p2m):
+            break
 
 
-def winner():
+def ask_mv(player):
+    '''Function asks the current player to provide game move'''
+
+    while True:
+        try:
+            mv = int(input(f'*Player{player} please enter your index position from 1 to 9: '))
+        except ValueError:
+            print('ValueError has occurred, please enter a valid index position')
+            continue
+        else:
+            return mv
+
+
+def winner(l, indx, p1m, p2m):
+    '''Function checks for a winner and returns the winner or draw whatever is the case'''
 
     print()
 
-    for w in ['X', 'O']:
+    for w in [p1m, p2m]:
         if ( (l[0] == l[1] == l[2] == w) or
              (l[3] == l[4] == l[5] == w) or
              (l[6] == l[7] == l[8] == w) or
@@ -90,28 +113,34 @@ def winner():
              (l[2] == l[4] == l[6] == w)
             ):
             if w == p1m:
-                print('Congratulations ***Player1*** has won the game')
+                print('Congratulations ***Player1*** has won the game!!')
             elif w == p2m:
-                print('Congratulations ***Player2*** has won the game')
+                print('Congratulations ***Player2*** has won the game!!')
             play_again()
-        elif not indx:
-            print('The game has ended in a draw')
-            play_again()
+
+    if not indx:
+        print('The game has ended in a draw!!')
+        play_again()
 
 
 def play_again():
+    '''Ask the players if they wish to play again'''
 
     print()
 
-    play_again = input('Do you wish to play again? Y or N: ')
+    play_again = input('Do you wish to play again? Y or N: \n')
     while play_again.upper() not in ['Y', 'N']:
         play_again = input('Please enter a valid choice, do you wish to play again? Y or N: ')
 
     if play_again.upper() == 'Y':
-        print('New game has begun ')
-        exit()
+        print('+++----------------------------------------------------------+++\n')
+        print('New game has begun!! \n')
+        p1m, p2m = game_markers()
+        game_begins(p1m, p2m)
     else:
+        print('-------------------------------')
         print('Thanks for playing Tic Tac Toe!')
+        print('-------------------------------\n')
         exit()
 
 
@@ -120,7 +149,6 @@ def pos_vals():
     return [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
-indx = list(range(1, 10))
-l = pos_vals()
-game_begins(l)
+p1m, p2m = game_markers()
+game_begins(p1m, p2m)
 
